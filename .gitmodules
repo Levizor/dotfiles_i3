@@ -1,0 +1,9 @@
+[submodule ".config/i3/xborder"]
+	path = .config/i3/xborder
+	url = https://github.com/Wadekiny/xborders.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/AstroNvim/AstroNvim
+[submodule ".config/xborders"]
+	path = .config/xborders
+	url = https://github.com/deter0/xborder
