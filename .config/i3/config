@@ -10,6 +10,7 @@
 #
 
 set $mod Mod1
+exec_always xset r rate 250
 
 client.focused #fba922 #fba922 #282A2E #fba922
 client.unfocused #fba922 #282A2E #fba922 #fba922
@@ -40,9 +41,9 @@ exec --no-startup-id nm-applet
 exec_always nitrogen --restore
 exec_always picom
 exec /home/levizor/.config/polybar/launch_polybar.sh 
-exec /home/levizor/.config/xborder/xborders --smart-hide-border --border-radius 7 --border-rgba  "#F0C674"
+exec /home/levizor/.config/xborders/xborders --smart-hide-border --border-radius 7 --border-rgba  "#F0C674"
 
-exec_always setxkbmap -model pc104 -layout us,ru,ua -option grp:win_space_toggle 
+exec_always setxkbmap -model pc104 -layout us,ru,ua -option grp:alt_space_toggle 
 
 
 exec_always --no-startup-id clipcatd    # start clipcatd at startup
@@ -89,8 +90,8 @@ tiling_drag modifier
 
 # i3 gaps 
 default_border none
-gaps inner 15
-gaps outer 5
+# gaps inner 15
+# gaps outer 5
 
 bindsym $mod+Shift+u gaps inner current set 15, gaps outer current set 5
 
@@ -109,7 +110,7 @@ set $Locker swaylock && sleep 1
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id swaymsg exit, mode "default"
+    bindsym e exec --no-startup-id i3 exit, mode "default"
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
@@ -133,14 +134,14 @@ bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+Return exec alacritty
 
 #Start browser
-bindsym Ctrl+Shift+w exec floorp
+bindsym Ctrl+$mod+w exec chromium
 
 
 #Start telegram
-bindsym Ctrl+Shift+t exec telegram-desktop
+bindsym $mod+t exec 64gram-desktop
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 
 
@@ -186,18 +187,18 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+g split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+shift+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+v floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -209,11 +210,11 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+s move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+s scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
