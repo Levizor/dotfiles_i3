@@ -1,0 +1,159 @@
+colors:
+  bg:         "282828"
+  bg0:        "282828"
+  bg1:        "3c3836"
+  bg2:        "504945"
+  bg3:        "665c54"
+  bg4:        "7c6f64"
+
+  fg:         "9B9FA9"
+  fg0:        "a9b1d6"
+  fg1:        "ebdbb2"
+  fg2:        "d5c4a1"
+  fg3:        "bdae93"
+  fg4:        "a89984"
+  
+  red: "f7768e"
+  green: "9ece6a"
+  yellow: "e0af68"
+  blue: "7aa2f7"
+  purple: "bb9af7"
+  white: "a9b1d6"     # Changed from cyan
+  gray: "15161e"     
+  cyan: "7dcfff"
+
+  alt_white:  "c0caf5"
+  alt_gray:   "414868"
+
+core:
+  normal_text:
+    foreground: fg
+
+  regular_file:
+    foreground: fg
+
+  reset_to_normal: {}
+
+  directory:
+    foreground: yellow
+
+  symlink:
+    foreground: cyan
+    font-style: italic
+
+  multi_hard_link:
+    font-style: bold
+
+  fifo:
+    foreground: purple
+
+  socket:
+    foreground: purple
+    font-style: bold
+
+  door:
+    foreground: purple
+    font-style: bold
+
+  block_device:
+    foreground: blue
+    font-style: bold
+
+  character_device:
+    foreground: yellow
+    font-style: italic
+
+  broken_symlink:
+    foreground: red
+    font-style: italic
+
+  missing_symlink_target:
+    foreground: fg
+    background: red
+
+  setuid:
+    foreground: fg
+    background: red
+
+  setgid:
+    foreground: bg
+    background: yellow
+
+  file_with_capability:
+    foreground: bg
+    background: red
+
+  sticky_other_writable:
+    foreground: fg
+    background: blue
+    font-style: italic
+
+  other_writable:
+    foreground: green
+    font-style: bold
+
+  sticky:
+    foreground: fg
+    background: blue
+
+  executable_file:
+    foreground: green
+    font-style: bold
+
+text:
+  special:
+    foreground: yellow
+    font-style: bold
+
+  todo:
+    foreground: green
+
+  licenses:
+    foreground: fg1
+    font-style: italic
+
+  configuration:
+    foreground: yellow
+
+  other:
+    foreground: fg
+
+markup:
+  foreground: yellow
+
+programming:
+  source:
+    foreground: purple
+
+  tooling:
+    foreground: green
+    font-style: italic
+
+    continuous-integration:
+      foreground: blue
+
+media:
+  foreground: white
+
+  video:
+    foreground: alt_white
+    font-style: bold
+
+office:
+  foreground: blue
+  font-style: bold
+
+archives:
+  foreground: yellow
+
+  images:
+    foreground: yellow
+    font-style: bold
+
+executable:
+  foreground: green
+  font-style: bold
+
+unimportant:
+  foreground: bg3
+  font-style: italic

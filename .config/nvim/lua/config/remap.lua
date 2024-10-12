@@ -1,0 +1,1 @@
+../../../../stow/NewHyprland/.config/nvim/lua/config/remap.lua
